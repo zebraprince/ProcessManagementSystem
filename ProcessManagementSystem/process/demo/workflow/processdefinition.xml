@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition xmlns="" name="WF_TEST_01">
+
+	<!-- 重第一个节点就发起申请 -->
+	<start-state name="START-STATE">
+		<transition name="" to="WF_APPLY"></transition>
+	</start-state>
+	<task-node name="WF_APPLY">
+		<task name="WF_APPLY">
+			<!-- todo nothing -->
+			<assignment
+				class="com.chinasofti.service.workflow.demo.handler.RaiseApplicationAssignment">
+			</assignment>
+		</task>
+		<event type="node-leave">
+			<script>//Raise Application 申请已被执行,将跳转到第一个任务节点.</script>
+
+			<!-- 当这个任务被流转到第一个task节点时,就产生一个动作 -->
+			<action name="action"
+				class="com.chinasofti.service.workflow.demo.action.RaiseApplicationInfoSaveAction">
+			</action>
+		</event>
+		<transition name="" to="WF_TASK"></transition>
+	</task-node>
+	<task-node name="WF_TASK">
+		<task name="WF_TASK">
+			<assignment
+				class="com.chinasofti.service.workflow.demo.handler.TaskApproveAssignment">
+			</assignment>
+		</task>
+		<event type="node-leave">
+			<script>//第一个任务被执行,节点将被跳转到下一个END节点.</script>
+			<!-- 当这个任务被流转到第一个task节点时,就产生一个动作 -->
+			<action name="action"
+				class="com.chinasofti.service.workflow.demo.action.TaskApproveInfoSaveAction">
+			</action>
+		</event>
+		<transition name="" to="END-STATE"></transition>
+	</task-node>
+	<end-state name="END-STATE"></end-state>
+</process-definition>

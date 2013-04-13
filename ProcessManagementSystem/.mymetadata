@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="technologyapprove"
+  id="myeclipse.1248621919968"
+  context-root="/technologyapprove"
+  j2ee-spec="5.0"
+  archive="technologyapprove.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

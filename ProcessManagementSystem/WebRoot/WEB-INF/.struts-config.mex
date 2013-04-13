@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/login.do" location="50,50" dimension="286,84" />
+  <StrutsActivity path="/lixiangshengqing.do" location="30,345" dimension="352,84" />
+  <StrutsActivity path="/lixiangshenpi.do" location="45,555" dimension="358,84" />
+  <StrutsActivity path="/executionManagementApplication.do" location="900,345" dimension="460,84" />
+  <StrutsActivity path="/executionManagementApprove.do" location="950,650" dimension="436,84" />
+  <StrutsActivity path="/testApplication.do" location="650,850" dimension="370,84" />
+  <StrutsActivity path="/testApprove.do" location="50,1050" dimension="346,84" />
+  <StrutsActivity path="/productsAppraisalApplication.do" location="950,1050" dimension="220,60" />
+  <StrutsActivity path="/productsAppraisalApprove.do" location="650,1150" dimension="196,60" />
+  <StrutsActivity path="/bonusApplication.do" location="1250,850" dimension="376,84" />
+  <StrutsActivity path="/bonusApprove.do" location="1250,1150" dimension="352,84" />
+  <StrutsActivity path="/shenpiLookup.do" location="350,1250" dimension="124,60" />
+  <StrutsActivity path="/shenqingliebiao.do" location="350,2050" dimension="142,60" />
+  <StrutsActivity path="/shenpiliebiao.do" location="650,2050" dimension="130,60" />
+  <StrutsActivity path="/user.do" location="1550,450" dimension="304,84" />
+  <StrutsActivity path="/back.do" location="1550,650" dimension="304,84" />
+  <StrutsActivity path="/tech.do" location="1850,850" dimension="304,84" />
+  <StrutsActivity path="/searchback.do" location="1850,1050" dimension="340,84" />
+  <StrutsActivity path="/user1.do" location="1850,1250" dimension="310,84" />
+  <StrutsActivity path="/searchback1.do" location="650,1350" dimension="346,84" />
+  <StrutsActivity path="/tmuser.do" location="1250,1350" dimension="316,84" />
+  <StrutsActivity path="/tmback.do" location="50,1450" dimension="316,84" />
+  <StrutsActivity path="/loadchange.do" location="1850,1450" dimension="340,84" />
+  <StrutsActivity path="/loadchangeback.do" location="650,1550" dimension="364,84" />
+  <StrutsActivity path="/uchange.do" location="1250,1550" dimension="322,84" />
+  <StrutsActivity path="/uchangeback.do" location="50,1650" dimension="346,84" />
+  <StrutsActivity path="/upload.do" location="1850,1650" dimension="316,84" />
+  <StrutsActivity path="/applicationSystem/main.jsp" location="50,250" dimension="202,48" />
+  <StrutsActivity path="/login/failure1.jsp" location="650,150" dimension="154,48" />
+  <StrutsActivity path="/login/failure2.jsp" location="950,150" dimension="154,48" />
+  <StrutsActivity path="/usersys/main.jsp" location="650,750" dimension="142,48" />
+  <StrutsActivity path="/technologymanagementsys/main.jsp" location="950,1250" dimension="238,48" />
+  <StrutsActivity path="/approveSystem/main.jsp" location="950,50" dimension="178,48" />
+  <StrutsActivity path="/login/login.jsp" location="650,50" dimension="136,48" />
+  <StrutsActivity path="/usersys/tab/add.jsp" location="650,1750" dimension="160,48" />
+  <StrutsActivity path="/usersys/ref2left.jsp" location="950,1750" dimension="166,48" />
+  <StrutsActivity path="/usersys/tab/searchadd.jsp" location="1250,1750" dimension="196,48" />
+  <StrutsActivity path="/usersys/searchleft.jsp" location="1550,1750" dimension="178,48" />
+  <StrutsActivity path="/usersys/tab/search1add.jsp" location="50,1850" dimension="202,48" />
+  <StrutsActivity path="/usersys/ref1left.jsp" location="350,1850" dimension="166,48" />
+  <StrutsActivity path="/technologymanagementsys/tab/useradd.jsp" location="650,1850" dimension="280,48" />
+  <StrutsActivity path="/technologymanagementsys/useradd.jsp" location="1250,1850" dimension="256,48" />
+  <StrutsActivity path="/technologymanagementsys/tab/loadchange.jsp" location="1850,1850" dimension="298,48" />
+  <StrutsActivity path="/technologymanagementsys/loadchange.jsp" location="50,1950" dimension="274,48" />
+  <StrutsActivity path="/technologymanagementsys/tab/userchange.jsp" location="650,1950" dimension="298,48" />
+  <StrutsActivity path="/technologymanagementsys/userchange.jsp" location="1250,1950" dimension="274,48" />
+  <StrutsActivity path="/technologymanagementsys/tab/loadadd.jsp" location="1850,1950" dimension="280,48" />
+  <StrutsActivity path="/technologymanagementsys/loadd.jsp" location="50,2050" dimension="244,48" />
+  <StrutsActivity path="/applicationSystem/submissionSuccess.jsp" location="510,360" dimension="280,48" />
+  <StrutsActivity path="/applicationSystem/executionManagementApplication2.jsp" location="945,465" dimension="364,48" />
+  <StrutsActivity path="/applicationSystem/settingUpApplication.jsp" location="45,450" dimension="298,48" />
+  <StrutsActivity path="/approveSystem/submissionSuccess.jsp" location="585,585" dimension="256,48" />
+  <StrutsActivity path="/approveSystem/AllReadyDone.jsp" location="540,495" dimension="226,48" />
+  <StrutsActivity path="/approveSystem/settingUpApprove2.jsp" location="75,675" dimension="256,48" />
+  <StrutsActivity path="/approveSystem/executionManagementApprove2.jsp" location="50,850" dimension="316,48" />
+  <StrutsActivity path="/applicationSystem/testApplication2.jsp" location="50,950" dimension="274,48" />
+  <StrutsActivity path="/approveSystem/testApprove2.jsp" location="650,1050" dimension="226,48" />
+  <StrutsActivity path="/applicationSystem/bonusApplication2.jsp" location="1250,1050" dimension="280,48" />
+  <StrutsActivity path="/approveSystem/bonusApprove2.jsp" location="50,1250" dimension="232,48" />
+  <StrutsActivity path="/download.do" />
+  <StrutsTransition id="/tmuser.do,useradd,/technologymanagementsys/tab/useradd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1392" />
+      <AbsolutePoint location="1185,1392" />
+      <AbsolutePoint location="1185,1874" />
+      <AbsolutePoint location="930,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/back.do,back,/usersys/ref2left.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1672,734" />
+      <AbsolutePoint location="1672,1495" />
+      <AbsolutePoint location="1035,1495" />
+      <AbsolutePoint location="1035,1750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchback.do,searchbackup,/usersys/searchleft.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1083" />
+      <AbsolutePoint location="1743,1083" />
+      <AbsolutePoint location="1743,1774" />
+      <AbsolutePoint location="1728,1774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,add,/usersys/tab/add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1854,492" />
+      <AbsolutePoint location="2265,492" />
+      <AbsolutePoint location="2265,1813" />
+      <AbsolutePoint location="730,1813" />
+      <AbsolutePoint location="730,1798" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login/login.jsp,null,/login.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,74" />
+      <AbsolutePoint location="336,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,failure2,/login/failure2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="336,113" />
+      <AbsolutePoint location="1027,113" />
+      <AbsolutePoint location="1027,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/uchange.do,change,/technologymanagementsys/tab/userchange.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1572,1592" />
+      <AbsolutePoint location="2295,1592" />
+      <AbsolutePoint location="2295,2013" />
+      <AbsolutePoint location="799,2013" />
+      <AbsolutePoint location="799,1998" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/usersys/tab/searchadd.jsp,null,/searchback.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1774" />
+      <AbsolutePoint location="1215,1774" />
+      <AbsolutePoint location="1215,1125" />
+      <AbsolutePoint location="1850,1125" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/technologymanagementsys/tab/userchange.jsp,null,/uchangeback.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1974" />
+      <AbsolutePoint location="630,1974" />
+      <AbsolutePoint location="630,1765" />
+      <AbsolutePoint location="223,1765" />
+      <AbsolutePoint location="223,1734" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tmback.do,back,/technologymanagementsys/useradd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="366,1495" />
+      <AbsolutePoint location="630,1495" />
+      <AbsolutePoint location="630,1725" />
+      <AbsolutePoint location="1461,1725" />
+      <AbsolutePoint location="1461,1850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loadchangeback.do,back,/technologymanagementsys/loadchange.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1614" />
+      <AbsolutePoint location="-15,1614" />
+      <AbsolutePoint location="-15,1974" />
+      <AbsolutePoint location="50,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/usersys/tab/search1add.jsp,null,/searchback1.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="151,1898" />
+      <AbsolutePoint location="151,1913" />
+      <AbsolutePoint location="1131,1913" />
+      <AbsolutePoint location="1131,1392" />
+      <AbsolutePoint location="996,1392" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tech.do,searchadd,/usersys/tab/searchadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,922" />
+      <AbsolutePoint location="1803,922" />
+      <AbsolutePoint location="1803,1665" />
+      <AbsolutePoint location="1348,1665" />
+      <AbsolutePoint location="1348,1750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,chief,/approveSystem/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,50" />
+      <AbsolutePoint location="193,-25" />
+      <AbsolutePoint location="1039,-25" />
+      <AbsolutePoint location="1039,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,admin,/technologymanagementsys/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,failure1,/login/failure1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="223,134" />
+      <AbsolutePoint location="223,174" />
+      <AbsolutePoint location="650,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/uchangeback.do,back,/technologymanagementsys/userchange.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1692" />
+      <AbsolutePoint location="15,1692" />
+      <AbsolutePoint location="15,2203" />
+      <AbsolutePoint location="1387,2203" />
+      <AbsolutePoint location="1387,1998" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loadchange.do,change,/technologymanagementsys/tab/loadchange.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1495" />
+      <AbsolutePoint location="1833,1495" />
+      <AbsolutePoint location="1833,1874" />
+      <AbsolutePoint location="1850,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/technologymanagementsys/userchange.jsp,null,/uchange.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1521,1950" />
+      <AbsolutePoint location="1521,1634" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/usersys/tab/add.jsp,null,/back.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="730,1750" />
+      <AbsolutePoint location="730,1695" />
+      <AbsolutePoint location="1702,1695" />
+      <AbsolutePoint location="1702,734" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/usersys/ref2left.jsp,null,/user.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1033,1798" />
+      <AbsolutePoint location="1033,2173" />
+      <AbsolutePoint location="2205,2173" />
+      <AbsolutePoint location="2205,522" />
+      <AbsolutePoint location="1854,522" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/technologymanagementsys/loadd.jsp,null,/upload.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="172,2098" />
+      <AbsolutePoint location="172,2293" />
+      <AbsolutePoint location="2385,2293" />
+      <AbsolutePoint location="2385,1692" />
+      <AbsolutePoint location="2166,1692" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,manager,/usersys/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/usersys/searchleft.jsp,null,/tech.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1641,1750" />
+      <AbsolutePoint location="1641,892" />
+      <AbsolutePoint location="1850,892" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/usersys/ref1left.jsp,null,/user1.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="489,1850" />
+      <AbsolutePoint location="489,1292" />
+      <AbsolutePoint location="1850,1292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user1.do,search1add,/usersys/tab/search1add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1325" />
+      <AbsolutePoint location="-45,1325" />
+      <AbsolutePoint location="-45,1874" />
+      <AbsolutePoint location="50,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,worker,/applicationSystem/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,134" />
+      <AbsolutePoint location="193,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/technologymanagementsys/useradd.jsp,null,/tmuser.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1506,1874" />
+      <AbsolutePoint location="1773,1874" />
+      <AbsolutePoint location="1773,1392" />
+      <AbsolutePoint location="1566,1392" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/upload.do,add,/technologymanagementsys/tab/loadadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,1695" />
+      <AbsolutePoint location="1803,1695" />
+      <AbsolutePoint location="1803,1974" />
+      <AbsolutePoint location="1850,1974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchback1.do,searchbackup1,/usersys/ref1left.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1392" />
+      <AbsolutePoint location="433,1392" />
+      <AbsolutePoint location="433,1850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/technologymanagementsys/tab/useradd.jsp,null,/tmback.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1874" />
+      <AbsolutePoint location="555,1874" />
+      <AbsolutePoint location="555,1465" />
+      <AbsolutePoint location="366,1465" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/technologymanagementsys/loadchange.jsp,null,/loadchange.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="324,1974" />
+      <AbsolutePoint location="600,1974" />
+      <AbsolutePoint location="600,1465" />
+      <AbsolutePoint location="1850,1465" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/technologymanagementsys/tab/loadchange.jsp,null,/loadchangeback.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2137,1898" />
+      <AbsolutePoint location="2137,2133" />
+      <AbsolutePoint location="-85,2133" />
+      <AbsolutePoint location="-85,1592" />
+      <AbsolutePoint location="650,1592" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

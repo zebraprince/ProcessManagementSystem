@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 把此配置文件中的属性值,通过移动到properties等属性文件中,读取属性文件通过${} EL的形式读取key&value-->
+	<bean id="placeholderConfig"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<!-- 放置的默认的配置文件地址为classpath路径下init.properties文件 -->
+			<value>classpath:init.properties</value>
+		</property>
+	</bean>
+
+	<!-- 连接数据库的数据源,采用了apache的DBCP作为数据库连接池,此外还可以针对DBCP整个其它的参数值 -->
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url">
+			<value>${datasource.url}</value>
+		</property>
+		<property name="username">
+			<value>${datasource.username}</value>
+		</property>
+		<property name="password">
+			<value>${datasource.password}</value>
+		</property>
+	</bean>
+
+	<!-- Hibernate的会话工厂,用来创建会话. -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<!-- hibernate的数据库方言 -->
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<!-- 有Hibernate操作时,显示HQL -->
+				<prop key="show_sql">true</prop>
+			</props>
+		</property>
+		<!-- 关联的数据库表映射文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/chinasofti/dao/config/User.hbm.xml</value>
+				<value>com/chinasofti/dao/config/Project.hbm.xml</value>
+				</list>
+		</property>
+	</bean>
+	
+	<!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+			p:sessionFactory-ref="sessionFactory"/>
+
+	<!-- Transaction manager that delegates to JTA (for a transactional JNDI DataSource) -->
+	<!--
+	<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager"/>
+	-->
+
+
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ========================= -->
+
+	<!--
+		Activates various annotations to be detected in bean classes:
+		Spring's @Required and @Autowired, as well as JSR 250's @Resource.
+	-->
+	<context:annotation-config/>
+
+	<!--
+		Instruct Spring to perform declarative transaction management
+		automatically on annotated classes.
+	-->
+	<tx:annotation-driven/>
+	
+	
+	<!-- 用户TODO,一下需要添加业务DAO & services实例 ///////////////////////////////////////////////-->
+
+	<!-- 案例:用户dao, -->
+	<bean name="UserDAO" class="com.chinasofti.dao.UserDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+<bean name="ProjectDAO" class="com.chinasofti.dao.ProjectDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+   
+	<!-- 案例,注册服务 -->
+	<bean name="LoginService"
+		class="com.chinasofti.service.impl.LoginService">
+		<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+	</bean>
+	
+     <bean name="LixiangshenqingService"
+		class="com.chinasofti.service.impl.LixiangshenqingService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+		<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+	</bean>
+     
+      
+	
+	    
+	 <bean name="LixiangshenpiService"
+		class="com.chinasofti.service.impl.LixiangshenpiService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+		
+	</bean>
+	 <bean name="ExecuteManagementApplicationService"
+		class="com.chinasofti.service.impl.ExecuteManagementApplicationService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+  </bean>
+  
+      <bean name="ExecuteManagementApproveService"
+		class="com.chinasofti.service.impl.ExecuteManagementApproveService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+  </bean>
+  
+
+
+      <bean name="TestApplicationService"
+		class="com.chinasofti.service.impl.TestApplicationService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+  </bean>
+  
+   <bean name="TestApproveService"
+		class="com.chinasofti.service.impl.TestApproveService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+  </bean>
+  
+    <bean name="ProductsAppraisalApplicationService"
+		class="com.chinasofti.service.impl.ProductsAppraisalApplicationService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+  </bean>
+  
+  
+    <bean name="ProductsAppraisalApproveService"
+		class="com.chinasofti.service.impl.ProductsAppraisalApproveService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+  </bean>
+  
+     <bean name="BonusApplicationService"
+		class="com.chinasofti.service.impl.BonusApplicationService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+  </bean>
+  
+    <bean name="BonusApproveService"
+		class="com.chinasofti.service.impl.BonusApproveService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+  </bean>
+  
+    <bean name="ShenpiLookupService"
+		class="com.chinasofti.service.impl.ShenpiLookupService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+  </bean>
+  
+  <bean name="ShenqingliebiaoService"
+		class="com.chinasofti.service.impl.ShenqingliebiaoService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+	</bean>
+  
+  
+  <bean name="ShenpiliebiaoService"
+		class="com.chinasofti.service.impl.ShenpiliebiaoService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+	</bean>
+  
+  
+  
+  
+  
+  <bean name="TechProService"
+		class="com.chinasofti.service.impl.TechProService">
+		<property name="projectDAO">
+			<ref bean="ProjectDAO" />
+		</property>
+	</bean>
+
+
+
+
+	<!-- 案例,注册服务 -->
+	<bean name="UserService"
+		class="com.chinasofti.service.impl.UserService">
+		<property name="userDAO">
+			<ref bean="UserDAO" />
+		</property>
+	</bean>
+	
+	
+	<!-- END用户bean添加,///////////////////////////////////////////////-->
+</beans>

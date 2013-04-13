@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- 案例：struts的ActionBean -->
+	
+	<!--  -->
+	<bean name="/jbpm"
+		class="com.chinasofti.web.struts.action.DispenseAction"
+		scope="singleton">
+	</bean>
+	<!--  -->
+	<bean name="/apply"
+		class="com.chinasofti.web.struts.action.ApplyAction"
+		scope="singleton">
+	</bean>
+	<!--  -->
+	<bean name="/userAction"
+		class="com.chinasofti.web.struts.action.UserAction"
+		scope="singleton">
+	</bean>
+	<!--  -->
+	<bean name="/checkAction"
+		class="com.chinasofti.web.struts.action.CheckAction"
+		scope="singleton">
+	</bean>
+	<bean name="/login"
+	
+	class="com.chinasofti.web.struts.action.LoginAction"
+	scope="prototype">
+	<property name="loginService">
+	<ref bean="LoginService"/>
+    </property>
+    <property name="userDAO">
+    <ref bean="UserDAO"/>
+    </property>
+	</bean>
+	
+	<bean name="/lixiangshengqing"
+	
+	class="com.chinasofti.web.struts.action.LixiangshengqingAction"
+	scope="singleton">
+	<property name="lixiangshenqingService">
+	<ref bean="LixiangshenqingService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+  <property name="userDAO">
+    <ref bean="UserDAO"/>
+    </property>
+	</bean>
+	
+	<bean name="/lixiangshenpi"
+	
+	class="com.chinasofti.web.struts.action.LixiangshenpiAction"
+	scope="singleton">
+	<property name="lixiangshenpiService">
+	<ref bean="LixiangshenpiService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	<bean name="/executionManagementApplication"
+	
+	class="com.chinasofti.web.struts.action.ExecutionManagementApplicationAction"
+	scope="singleton">
+	<property name="executeManagementApplicationService">
+	<ref bean="ExecuteManagementApplicationService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	<bean name="/executionManagementApprove"
+	
+	class="com.chinasofti.web.struts.action.ExecutionManagementApproveAction"
+	scope="singleton">
+	<property name="executeManagementApproveService">
+	<ref bean="ExecuteManagementApproveService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	
+	<bean name="/testApplication"
+	
+	class="com.chinasofti.web.struts.action.TestApplicationAction"
+	scope="singleton">
+	<property name="testApplicationService">
+	<ref bean="TestApplicationService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	
+	<bean name="/testApprove"
+	
+	class="com.chinasofti.web.struts.action.TestApproveAction"
+	scope="singleton">
+	<property name="testApproveService">
+	<ref bean="TestApproveService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+		
+	<bean name="/productsAppraisalApplication"
+	
+	class="com.chinasofti.web.struts.action.ProductsAppraisalApplicationAction"
+	scope="singleton">
+	<property name="productsAppraisalApplicationService">
+	<ref bean="ProductsAppraisalApplicationService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	<bean name="/productsAppraisalApprove"
+	
+	class="com.chinasofti.web.struts.action.ProductsAppraisalApproveAction"
+	scope="singleton">
+	<property name="productsAppraisalApproveService">
+	<ref bean="ProductsAppraisalApproveService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	<bean name="/bonusApplication"
+	class="com.chinasofti.web.struts.action.BonusApplicationAction"
+	scope="singleton">
+	<property name="bonusApplicationService">
+	<ref bean="BonusApplicationService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+		<bean name="/bonusApprove"
+	class="com.chinasofti.web.struts.action.BonusApproveAction"
+	scope="singleton">
+	<property name="bonusApproveService">
+	<ref bean="BonusApproveService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	
+		<bean name="/shenpiLookup"
+	class="com.chinasofti.web.struts.action.ShenpiLookupAction"
+	scope="singleton">
+	<property name="shenpiLookupService">
+	<ref bean="ShenpiLookupService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	
+		<bean name="/shenqingliebiao"
+	class="com.chinasofti.web.struts.action.ShenqingliebiaoAction"
+	scope="singleton">
+	<property name="shenqingliebiaoService">
+	<ref bean="ShenqingliebiaoService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	
+		<bean name="/shenpiliebiao"
+	class="com.chinasofti.web.struts.action.ShenpiliebiaoAction"
+	scope="singleton">
+	<property name="shenpiliebiaoService">
+	<ref bean="ShenpiliebiaoService"/>
+    </property>
+    <property name="projectDAO">
+    <ref bean="ProjectDAO"/>
+    </property>
+	</bean>
+	
+	
+		<bean name="/download"
+	class="com.chinasofti.web.struts.action.DownloadAction"
+	scope="singleton">
+	
+	</bean>
+	
+</beans>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition
+  xmlns=""  name="mypro">
+   <start-state name="start">
+      <transition name="" to="task1"></transition>
+   </start-state>
+   <task-node name="task1">
+   
+      <task name="task1">
+			<!-- todo nothing -->
+			<assignment
+				class="com.chinasofti.service.workflow.handler.Task1ApplicationAssignment">
+			</assignment>
+		</task>
+      <transition name="" to="task2"></transition>
+   </task-node>
+   <task-node name="task2">
+       <task name="task2">
+			<!-- todo nothing -->
+			<assignment
+				class="com.chinasofti.service.workflow.handler.Task2ApplicationAssignment">
+			</assignment>
+		</task>
+      <transition name="" to="task3"></transition>
+   </task-node>
+   <task-node name="task3">
+      <task name="task3">
+			<!-- todo nothing -->
+			<assignment
+				class="com.chinasofti.service.workflow.handler.Task3ApplicationAssignment">
+			</assignment>
+		</task>
+      <transition name="" to="task4"></transition>
+   </task-node>
+   <task-node name="task4">
+   <task name="task4">
+			<!-- todo nothing -->
+			<assignment
+				class="com.chinasofti.service.workflow.handler.Task4ApplicationAssignment">
+			</assignment>
+		</task>
+      <transition name="" to="task5"></transition>
+   </task-node>
+   <task-node name="task5">
+   <task name="task5">
+			<!-- todo nothing -->
+			<assignment
+				class="com.chinasofti.service.workflow.handler.Task5ApplicationAssignment">
+			</assignment>
+		</task>
+      <transition name="" to="task6"></transition>
+   </task-node>
+   <task-node name="task6">
+   <task name="task6">
+			<!-- todo nothing -->
+			<assignment
+				class="com.chinasofti.service.workflow.handler.Task6ApplicationAssignment">
+			</assignment>
+		</task>
+      <transition name="" to="end1"></transition>
+   </task-node>
+   <end-state name="end1"></end-state>
+</process-definition>

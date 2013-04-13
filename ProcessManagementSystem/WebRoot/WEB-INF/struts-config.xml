@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="loginForm"
+			       type="com.chinasofti.web.struts.form.LoginForm" />
+		<form-bean name="jbpmActionForm" 
+		           type="com.chinasofti.web.struts.form.JbpmDemoActionForm" />
+    <form-bean name="lixiangshengqingForm" type="com.chinasofti.web.struts.form.LixiangshengqingForm" />
+    <form-bean name="lixiangshenpiForm" type="com.chinasofti.web.struts.form.LixiangshenpiForm" />
+    <form-bean name="executionManagementApplicationForm" type="com.chinasofti.web.struts.form.ExecutionManagementApplicationForm" />
+    <form-bean name="executionManagementApproveForm" type="com.chinasofti.web.struts.form.ExecutionManagementApproveForm" />
+     <form-bean name="testApplicationForm" type="com.chinasofti.web.struts.form.TestApplicationForm" />
+      <form-bean name="testApproveForm" type="com.chinasofti.web.struts.form.TestApproveForm" />
+       <form-bean name="productsAppraisalApplicationForm" type="com.chinasofti.web.struts.form.ProductsAppraisalApplicationForm" />
+      <form-bean name="productsAppraisalApproveForm" type="com.chinasofti.web.struts.form.ProductsAppraisalApproveForm" />
+        <form-bean name="bonusApplicationForm" type="com.chinasofti.web.struts.form.BonusApplicationForm" />
+         <form-bean name="bonusApproveForm" type="com.chinasofti.web.struts.form.BonusApproveForm" />
+              <form-bean name="lookupForm" type="com.chinasofti.web.struts.form.LookupForm" />
+         <form-bean name="shenqingliebiaoForm" type="com.chinasofti.web.struts.form.ShenqingliebiaoForm" />      
+              
+               <form-bean name="userForm" type="com.chinasofti.web.struts.form.UserForm" />
+    <form-bean name="techForm" type="com.chinasofti.web.struts.form.TechForm" />
+    <form-bean name="user1Form" type="com.chinasofti.web.struts.form.User1Form" />
+    <form-bean name="tmuserForm" type="com.chinasofti.web.struts.form.TmuserForm" />
+    <form-bean name="tmuserchangeForm" type="com.chinasofti.struts.form.TmuserchangeForm" />
+    <form-bean name="tmchangeForm" type="com.chinasofti.struts.form.TmchangeForm" />
+    <form-bean name="userchangForm" type="com.chinasofti.struts.form.UserchangForm" />
+    <form-bean name="userchangeForm" type="com.chinasofti.web.struts.form.UserchangeForm" />
+    <form-bean name="loaddForm" type="com.chinasofti.web.struts.form.LoaddForm" />
+    <form-bean name="loadchangeForm" type="com.chinasofti.web.struts.form.LoadchangeForm" />
+    <form-bean name="uchangeForm" type="com.chinasofti.web.struts.form.UchangeForm" />
+    <form-bean name="uploadForm" type="com.chinasofti.web.struts.form.UploadForm" />
+              
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+    <action
+       attribute="loginForm"
+          input="/login/login.jsp"
+
+       type="com.chinasofti.web.struts.action.LoginAction"
+      name="loginForm"
+      path="/login"
+      scope="request"
+     >
+      <forward name="worker" path="/applicationSystem/main.jsp" />
+      <forward name="failure2" path="/login/failure2.jsp" />
+      <forward name="failure1" path="/login/failure1.jsp" />
+      <forward name="chief" path="/approveSystem/main.jsp" />
+      <forward name="manager" path="/usersys/main.jsp"/>
+      <forward name="admin" path="/technologymanagementsys/main.jsp"/>
+    </action>
+    <action
+     
+      name="lixiangshengqingForm"
+      path="/lixiangshengqing"
+      scope="request"
+      >
+      <forward name="sucess" path="/applicationSystem/submissionSuccess.jsp" />
+    </action>
+    <action
+      
+      name="lixiangshenpiForm"
+      path="/lixiangshenpi"
+      scope="request"
+     >
+      <forward name="finish" path="/approveSystem/submissionSuccess.jsp" />
+      <forward name="done" path="/approveSystem/AllReadyDone.jsp" />
+    </action>
+   <action
+     
+      name="executionManagementApplicationForm"
+      path="/executionManagementApplication"
+      scope="request"
+     >
+      <forward name="sucess" path="/applicationSystem/submissionSuccess.jsp" />
+    </action>
+    
+	<action
+      
+      name="executionManagementApproveForm"
+      path="/executionManagementApprove"
+      scope="request"
+     >
+      <forward name="finish" path="/approveSystem/submissionSuccess.jsp" />
+      <forward name="done" path="/approveSystem/AllReadyDone.jsp" />
+      
+    </action>
+		
+	<action
+      
+      name="testApplicationForm"
+      path="/testApplication"
+      scope="request">
+     
+      <forward name="success" path="/applicationSystem/submissionSuccess.jsp" />
+    </action>
+			
+		 <action
+     
+      name="testApproveForm"
+      path="/testApprove"
+      scope="request"
+      >
+      <forward name="finish" path="/approveSystem/submissionSuccess.jsp" />
+      <forward name="done" path="/approveSystem/AllReadyDone.jsp" />
+      
+    </action>
+    
+    
+    <action
+      
+      name="productsAppraisalApplicationForm"
+      path="/productsAppraisalApplication"
+      scope="request"
+      >
+      <forward name="success" path="/applicationSystem/submissionSuccess.jsp" />
+    </action>
+		
+		 <action
+     
+      name="productsAppraisalApproveForm"
+      path="/productsAppraisalApprove"
+      scope="request"
+      >
+      <forward name="finish" path="/approveSystem/submissionSuccess.jsp" />
+      <forward name="done" path="/approveSystem/AllReadyDone.jsp" />
+    </action>
+    
+     <action
+    
+      name="bonusApplicationForm"
+      path="/bonusApplication"
+      scope="request"
+     >
+      <forward name="success" path="/applicationSystem/submissionSuccess.jsp" />
+    </action>
+    
+    
+    
+     <action
+     
+      name="bonusApproveForm"
+      path="/bonusApprove"
+      scope="request"
+     >
+       <forward name="finish" path="/approveSystem/submissionSuccess.jsp" />
+      <forward name="done" path="/approveSystem/AllReadyDone.jsp" />
+    </action>
+    
+     <action
+     
+      name="lookupForm"
+      path="/shenpiLookup"
+      scope="request"
+     >
+       <forward name="success" path="/approveSystem/particularInfo.jsp" />
+      
+    </action>
+    	
+    	
+    <action
+     
+      name="shenqingliebiaoForm"
+      path="/shenqingliebiao"
+      scope="request"
+     >
+       <forward name="success" path="/applicationSystem/mainTab/tab1.jsp" />
+      
+    </action>
+    	 	
+    	 <action
+     
+     
+      path="/shenpiliebiao"
+      scope="request"
+     >
+       <forward name="success" path="/approveSystem/mainTab/tab1.jsp" />
+      
+    </action>
+    	
+    	 <action
+     
+     
+      path="/download"
+      scope="request"
+     >
+       <forward name="success" path="/approveSystem/mainTab/tab1.jsp" />
+      
+    </action>
+    		
+    	
+    	
+    	
+    	
+    	
+    	 <action
+      attribute="userForm"
+      input="/usersys/ref2left.jsp"
+      name="userForm"
+      path="/user"
+      scope="request"
+      type="com.chinasofti.web.struts.action.UserAction">
+      <forward name="add" path="/usersys/tab/add.jsp" />
+    </action>
+    <action
+      attribute="userForm"
+      input="/usersys/tab/add.jsp"
+      name="userForm"
+      path="/back"
+      scope="request"
+      type="com.chinasofti.web.struts.action.BackAction">
+      <forward name="back" path="/usersys/ref2left.jsp" />
+    </action>
+    <action
+      attribute="techForm"
+      input="/usersys/searchleft.jsp"
+      name="techForm"
+      path="/tech"
+      scope="request"
+      type="com.chinasofti.web.struts.action.TechAction">
+      <forward name="searchadd" path="/usersys/tab/searchadd.jsp" />
+    </action>
+    <action
+      input="/usersys/tab/searchadd.jsp"
+      path="/searchback"
+      type="com.chinasofti.web.struts.action.SearchbackAction">
+      <forward name="searchbackup" path="/usersys/searchleft.jsp" />
+    </action>
+    <action
+      attribute="user1Form"
+      input="/usersys/ref1left.jsp"
+      name="user1Form"
+      path="/user1"
+      scope="request"
+      type="com.chinasofti.web.struts.action.User1Action">
+      <forward name="search1add" path="/usersys/tab/search1add.jsp" />
+    </action>
+    <action
+      attribute="user1Form"
+      input="/usersys/tab/search1add.jsp"
+      name="user1Form"
+      path="/searchback1"
+      scope="request"
+      type="com.chinasofti.web.struts.action.Searchback1Action">
+      <forward name="searchbackup1" path="/usersys/ref1left.jsp" />
+    </action>
+    <action
+      attribute="tmuserForm"
+      input="/technologymanagementsys/useradd.jsp"
+      name="tmuserForm"
+      path="/tmuser"
+      scope="request"
+      type="com.chinasofti.web.struts.action.TmuserAction">
+      <forward name="useradd" path="/technologymanagementsys/tab/useradd.jsp" />
+    </action>
+    <action
+      attribute="tmuserForm"
+      input="/technologymanagementsys/tab/useradd.jsp"
+      name="tmuserForm"
+      path="/tmback"
+      scope="request"
+      type="com.chinasofti.web.struts.action.TmbackAction">
+      <forward name="back" path="/technologymanagementsys/useradd.jsp" />
+    </action>
+    
+    
+    
+    
+    <action
+      attribute="loadchangeForm"
+      input="/technologymanagementsys/loadchange.jsp"
+      name="loadchangeForm"
+      path="/loadchange"
+      scope="request"
+      type="com.chinasofti.web.struts.action.LoadchangeAction">
+      <forward name="change" path="/technologymanagementsys/tab/loadchange.jsp" />
+    </action>
+    <action
+      attribute="loadchangeForm"
+      input="/technologymanagementsys/tab/loadchange.jsp"
+      name="loadchangeForm"
+      path="/loadchangeback"
+      scope="request"
+      type="com.chinasofti.web.struts.action.LoadchangebackAction">
+      <forward name="back" path="/technologymanagementsys/loadchange.jsp" />
+    </action>
+    <action
+      attribute="uchangeForm"
+      input="/technologymanagementsys/userchange.jsp"
+      name="uchangeForm"
+      path="/uchange"
+      scope="request"
+      type="com.chinasofti.web.struts.action.UchangeAction">
+      <forward name="change" path="/technologymanagementsys/tab/userchange.jsp" />
+    </action>
+    <action
+      attribute="uchangeForm"
+      input="/technologymanagementsys/tab/userchange.jsp"
+      name="uchangeForm"
+      path="/uchangeback"
+      scope="request"
+      type="com.chinasofti.web.struts.action.UchangebackAction">
+      <forward name="back" path="/technologymanagementsys/userchange.jsp" />
+    </action>
+    <action
+      attribute="uploadForm"
+      input="/technologymanagementsys/loadd.jsp"
+      name="uploadForm"
+      path="/upload"
+      scope="request"
+      type="com.chinasofti.web.struts.action.UploadAction">
+      <forward name="add" path="/technologymanagementsys/tab/loadadd.jsp" />
+    </action>
+    
+    
+    
+    
+	</action-mappings>
+	
+	<!-- 
+	<controller>用于配置ActionServlet. 属性 描述
+				bufferSize 指定上载文件的输入缓冲的大小。该属性为可选项，默认值为4096.
+				className 指定和<controller>元素对应的配置类。默认为org.apache.struts.config.ControllerConfig.
+				contentType 指定响应结果的内容类型和字符编码。该属性为可选项，默认值为text/html。如果在Action和JSP网页中也设置了内容类型和字符编码，将会覆盖该设置。
+				locale 指定是否把Locale对象保存到当前用户的Session中。默认值为false.
+				processorClass 指定负责处理请求的Java类的完整类名。默认值为org.apache.struts.action.RequestProcessor。如果把此项设置为自定义的类，那么应该保证该类扩展了org.apache.struts.action.RequestProcessor类。
+				tempDir 指定处理文件上传的临时工作目录。如果此项没有设置，将采用Servlet容器为Web应用分配的临时工作目录。
+				nochache 如果为true，在响应结果中将加入特定的头参数 ：Pragma, Cache-Control和Expires，防止页面被存储在客户浏览器的缓存中。默认值为false.
+				如果应用包含多个子应用，可以在每个字应用的Struts配置文件中配置<controller>元素。这样，尽管这些子应用共享同一个ActionServlet对象，但是他们可以使用不同的RequestProcessor类。
+				以下是<controller>元素的配置代码示例：
+	<controller contentType="text/html;charset=UTF-8" locale="true" processorClass="CustomRequestProcessor"/> 
+ -->
+ 
+	<!-- SSH整合时,请求控制权交给spring去处理 -->
+	<controller
+		processorClass="org.springframework.web.struts.DelegatingRequestProcessor">
+	</controller>
+
+	<message-resources
+		parameter="com.chinasofti.web.struts.ApplicationResources" />
+	<!-- plugin要配置在message-resources后面 -->
+	
+	<!-- 
+	struts跟spring整合！这是配置Struts的action托管给spring，在struts-config.xml中配置contextloaderplugin插件，来加载spring配置。
+contextloaderplugin插件是struts1.x的插件，用来为struts的actionservlet加载spring context文件。
+	 -->
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/action-servlet.xml" />
+	</plug-in>
+</struts-config>
+

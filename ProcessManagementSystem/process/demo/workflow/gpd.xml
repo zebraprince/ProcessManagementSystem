@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-diagram name="WF_TEST_01" width="1028" height="581">
+  <node name="START-STATE" x="111" y="52" width="140" height="40">
+    <transition name="">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="WF_APPLY" x="38" y="145" width="140" height="40">
+    <transition name="">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="WF_TASK" x="269" y="183" width="140" height="40">
+    <transition name="">
+      <label x="5" y="-10"/>
+    </transition>
+  </node>
+  <node name="END-STATE" x="260" y="285" width="140" height="40"/>
+</process-diagram>
